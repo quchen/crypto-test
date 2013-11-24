@@ -1,7 +1,7 @@
 language: haskell
 
-before_install: echo "before_install" && true
-install:        cabal install aes rsa binary
+before_install: cabal list --installed
+install:        cabal install bytestring-0.10.4.0 aes rsa  binary
 before_script:  echo "before_script"  && true
 script:         ghc -O rsa-aes.hs -o main.out
 after_success:  ./main.out

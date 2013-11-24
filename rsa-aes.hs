@@ -92,7 +92,7 @@ rsa g msg = do
       putStrLn "3.2 Verify message with public key"
       putStr "\n"
 
-      let (public, private, g') = generateKeyPair g 128
+      let (public, private, g') = generateKeyPair g 1024
 
       printf "\ESC[31mPublic:\ESC[0m %s\n\
              \\ESC[31mPrivate:\ESC[0m %s\n"
